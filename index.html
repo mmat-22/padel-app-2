@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/padel-app-2/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>padel-app</title>
+    <title>padel-app 2</title>
 <link rel="manifest" href="/padel-app-2/manifest.json" />
 <meta name="theme-color" content="#081224" />
 <meta name="mobile-web-app-capable" content="yes" />
@@ -13,6 +13,15 @@
     <script type="module" crossorigin src="/padel-app-2/assets/index-L6Ur8D24.js"></script>
     <link rel="stylesheet" crossorigin href="/padel-app-2/assets/index-nqMpL4T3.css">
   </head>
+
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/padel-app-2/sw.js");
+    });
+  }
+</script>
+
   <body>
     <div id="root"></div>
   </body>
